@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Investments | Wallet View</title>
+  <link rel="stylesheet" href="../css/investments.css">
+</head>
+<body>
+
+<header class="topbar">
+  <img src="../assets/images/logo.png" alt="Logo" class="topbar-logo">
+  <h2>Investments</h2>
+  <a href="dashboard.html">← Dashboard</a>
+</header>
+
+<main class="container">
+
+  <section class="card">
+    <h3>Add Investment</h3>
+    <input type="text"   id="invName"   placeholder="Investment Name">
+    <input type="number" id="invAmount" placeholder="Amount (₹)">
+    <button onclick="addInvestment()">Add</button>
+  </section>
+
+  <section class="card">
+    <h3>Your Investments</h3>
+    <ul id="investmentList"></ul>
+    <p class="total">Total Invested: ₹<span id="totalInvested">0</span></p>
+  </section>
+
+</main>
+
+<script src="../js/auth.js"></script>
+<script src="../js/investments.js"></script>
+</body>
+</html>

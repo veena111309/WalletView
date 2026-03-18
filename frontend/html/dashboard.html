@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | Wallet View</title>
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="dark-body">
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <span class="menu-btn" onclick="toggleSidebar()">☰</span>
+    <img src="../assets/images/logo.png" alt="Logo" class="topbar-logo">
+    <h2>Wallet View</h2>
+  </header>
+
+  <!-- MONTH SELECTOR -->
+  <div class="month-bar">
+    <button onclick="changeMonth('January')">Jan</button>
+    <button onclick="changeMonth('February')">Feb</button>
+    <button onclick="changeMonth('March')">Mar</button>
+    <button onclick="changeMonth('April')">Apr</button>
+    <button onclick="changeMonth('May')">May</button>
+    <button onclick="changeMonth('June')">Jun</button>
+    <button onclick="changeMonth('July')">Jul</button>
+    <button onclick="changeMonth('August')">Aug</button>
+    <button onclick="changeMonth('September')">Sep</button>
+    <button onclick="changeMonth('October')">Oct</button>
+    <button onclick="changeMonth('November')">Nov</button>
+    <button onclick="changeMonth('December')">Dec</button>
+  </div>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="sidebar">
+      <ul>
+        <li><a href="dashboard.html">🏠 Dashboard</a></li>
+        <li><a href="accounts.html">💳 Accounts</a></li>
+        <li><a href="expenses.html">💸 Expenses</a></li>
+        <li><a href="investments.html">📈 Investments</a></li>
+        <li><a href="budget.html">📊 Budget</a></li>
+        <li><a href="settings.html">⚙️ Settings</a></li>
+      </ul>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+      <!-- SUMMARY CARDS -->
+      <div class="cards">
+        <div class="card"><h4>💰 Income</h4><p id="income">₹0</p></div>
+        <div class="card"><h4>💸 Expenses</h4><p id="expenses">₹0</p></div>
+        <div class="card"><h4>📈 Investment</h4><p id="investment">₹0</p></div>
+        <div class="card"><h4>🏦 Savings</h4><p id="savings">₹0</p></div>
+      </div>
+
+      <!-- CHARTS -->
+      <div class="charts">
+        <div class="chart-box"><canvas id="barChart"></canvas></div>
+        <div class="chart-box"><canvas id="pieChart"></canvas></div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="../js/auth.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

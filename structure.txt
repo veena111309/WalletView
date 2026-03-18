@@ -1,0 +1,44 @@
+cd backend
+python app.py
+
+open index.html
+
+
+fintrack-app/
+├── index.html                    ← already fixed earlier
+
+├── frontend/
+│   ├── html/
+│   │   ├── accounts.html         ← accounts.html       (new)
+│   │   ├── budget.html           ← budget.html         (new)
+│   │   └── settings.html         ← settings.html       (new)
+│   │
+│   ├── css/
+│   │   └── style.css             ← already fixed earlier
+│   │
+│   └── js/
+│       ├── auth.js               ← auth.js
+│       ├── dashboard.js          ← dashboard.js
+│       ├── expenses.js           ← expenses.js
+│       ├── investments.js        ← investments.js
+│       ├── card.js               ← card.js
+│       ├── accounts.js           ← accounts.js         (new)
+│       ├── budget.js             ← budget.js           (new)
+│       └── settings.js           ← settings.js         (new)
+│
+├── backend/
+│   ├── app.py                    ← app.py
+│   ├── config.py                 ← config.py
+│   ├── db.py                     ← db.py
+│   ├── requirements.txt          ← requirements.txt
+│   └── routes/
+│       ├── __init__.py           ← (create empty file)
+│       ├── auth.py               ← route_auth.py       (rename)
+│       ├── accounts.py           ← route_accounts.py   (rename)
+│       ├── expenses.py           ← route_expenses.py   (rename)
+│       ├── investments.py        ← route_investments.py(rename)
+│       └── dashboard.py         ← route_dashboard.py  (rename)
+│
+└── database/
+    ├── schema.sql                ← schema.sql
+    └── sample_data.sql          ← sample_data.sql

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Accounts | Wallet View</title>
+  <link rel="stylesheet" href="../css/expenses.css">
+  <style>
+    .card-tile {
+      background: linear-gradient(135deg, #3A1C5A, #E83E8C);
+      color: #fff;
+      border-radius: 16px;
+      padding: 20px 25px;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 8px 20px rgba(232,62,140,0.3);
+    }
+    .card-tile .bank-name { font-size: 18px; font-weight: 600; }
+    .card-tile .card-no   { font-size: 13px; opacity: 0.8; margin-top: 4px; }
+    .card-tile .balance   { text-align: right; }
+    .card-tile .balance span  { font-size: 20px; font-weight: 700; }
+    .card-tile .balance small { display: block; font-size: 11px; opacity: 0.7; }
+    .card-tile button {
+      background: rgba(255,255,255,0.2);
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 12px;
+      margin-left: 15px;
+    }
+    .add-btn {
+      display: block; width: 100%; padding: 12px;
+      background: #E83E8C; color: #fff; border: none;
+      border-radius: 10px; font-size: 16px; cursor: pointer;
+      text-align: center; text-decoration: none; margin-top: 10px;
+    }
+    .total-summary { display: flex; gap: 15px; margin-bottom: 20px; }
+    .summary-box {
+      flex: 1; background: #fff; border-radius: 12px;
+      padding: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center;
+    }
+    .summary-box h4 { color: #3A1C5A; font-size: 13px; }
+    .summary-box p  { font-size: 20px; font-weight: 700; color: #E83E8C; margin-top: 5px; }
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <img src="../assets/images/logo.png" alt="Logo" class="topbar-logo">
+  <h2>Accounts</h2>
+  <a href="dashboard.html">← Dashboard</a>
+</header>
+
+<main class="container">
+
+  <div class="total-summary">
+    <div class="summary-box"><h4>Total Bank Balance</h4><p>₹<span id="totalBalance">0</span></p></div>
+    <div class="summary-box"><h4>Total Hand Cash</h4>  <p>₹<span id="totalCash">0</span></p></div>
+    <div class="summary-box"><h4>Net Worth</h4>        <p>₹<span id="netWorth">0</span></p></div>
+  </div>
+
+  <section class="card">
+    <h3>Your Cards</h3>
+    <div id="cardList"><p style="color:#aaa">No cards added yet.</p></div>
+    <a href="addcard.html" class="add-btn">+ Add New Card</a>
+  </section>
+
+</main>
+
+<script src="../js/auth.js"></script>
+<script src="../js/accounts.js"></script>
+</body>
+</html>

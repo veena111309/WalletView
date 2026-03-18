@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Card | Wallet View</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="login-body">
+  <div class="login-wrapper">
+
+    <img src="../assets/images/logo.png" alt="Logo" class="page-logo">
+    <h1 class="login-heading">Add Card</h1>
+
+    <form id="cardForm" class="login-container">
+      <select id="bankSelect" required>
+        <option value="">Select Bank</option>
+        <option value="SBI">SBI</option>
+        <option value="HDFC">HDFC</option>
+        <option value="ICICI">ICICI</option>
+        <option value="Axis">Axis</option>
+        <option value="Canara">Canara</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="text"     id="customBank"  placeholder="Enter Bank Name" style="display:none;">
+      <input type="text"     id="cardNumber"  placeholder="Card Number (16 digits)" maxlength="16" required>
+      <input type="password" id="cvv"         placeholder="CVV (3 digits)"          maxlength="3"  required>
+      <input type="text"     id="expiry"      placeholder="Expiry Date (MM/YY)"                    required>
+      <input type="number"   id="balance"     placeholder="Available Balance (₹)"                  required>
+      <input type="number"   id="handCash"    placeholder="Hand Cash (₹)"                          required>
+      <button type="submit"  class="login-btn">Add Card</button>
+    </form>
+
+  </div>
+  <script src="../js/auth.js"></script>
+  <script src="../js/card.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Budget | Wallet View</title>
+  <link rel="stylesheet" href="../css/expenses.css">
+  <style>
+    .progress-wrap { background: #f0e9f7; border-radius: 10px; height: 18px; overflow: hidden; margin: 10px 0; }
+    .progress-bar  { height: 100%; border-radius: 10px; background: linear-gradient(90deg,#E83E8C,#3A1C5A); transition: width 0.4s; }
+    .progress-bar.over { background: linear-gradient(90deg,#ff4444,#cc0000); }
+    .budget-meta   { display: flex; justify-content: space-between; font-size: 13px; color: #555; }
+    .income-row    { display: flex; gap: 10px; align-items: center; }
+    .income-row input { flex: 1; }
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <img src="../assets/images/logo.png" alt="Logo" class="topbar-logo">
+  <h2>Budget</h2>
+  <a href="dashboard.html">← Dashboard</a>
+</header>
+
+<main class="container">
+
+  <section class="card">
+    <h3>Set Monthly Income</h3>
+    <div class="income-row">
+      <input type="number" id="incomeInput" placeholder="Enter your monthly income (₹)">
+      <button onclick="saveIncome()">Save</button>
+    </div>
+    <p style="margin-top:10px; color:#3A1C5A;">
+      Current Income: <strong>₹<span id="currentIncome">0</span></strong>
+    </p>
+  </section>
+
+  <section class="card">
+    <h3>Monthly Budget Overview</h3>
+    <div style="margin-bottom:18px;">
+      <div class="budget-meta"><span>💸 Expenses</span><span id="expLabel">₹0 / ₹0</span></div>
+      <div class="progress-wrap"><div class="progress-bar" id="expBar" style="width:0%"></div></div>
+    </div>
+    <div style="margin-bottom:18px;">
+      <div class="budget-meta"><span>📈 Investments</span><span id="invLabel">₹0 / ₹0</span></div>
+      <div class="progress-wrap"><div class="progress-bar" id="invBar" style="width:0%"></div></div>
+    </div>
+    <div>
+      <div class="budget-meta"><span>💰 Savings</span><span id="savLabel">₹0</span></div>
+      <div class="progress-wrap">
+        <div class="progress-bar" id="savBar" style="width:0%; background:linear-gradient(90deg,#4CAF50,#087f23)"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="../js/auth.js"></script>
+<script src="../js/budget.js"></script>
+</body>
+</html>
