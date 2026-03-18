@@ -6,6 +6,7 @@ CREATED-27/01/2026
 
 
 Built With:
+(Local Storage)
 HTML / CSS / JavaScript for Frontend UI
 Python Flask for Backend API
 SQLite for Database
